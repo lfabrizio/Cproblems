@@ -1,0 +1,16 @@
+// example of how to use strlen
+
+
+// week 2 practice
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    string s = get_string("Namw:  ")
+    
+    int n = strlen(s);
+
+    printf("The length of your name is %\n", n); 
+}
