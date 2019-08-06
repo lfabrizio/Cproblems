@@ -14,3 +14,4 @@ int main(void)
 
     printf("The length of your name is %\n", n); 
 }
+// strlen
