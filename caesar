@@ -1,0 +1,16 @@
+// started
+include <cs50.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+// counting command line args
+int main(int argc, string argv[])
+{
+    if (argc != 2)
+    printf("Usage: ./caesar key");
+    return 1;
+}
+// access the key
+ int key = argv[1];
+
+// valididate the key 
