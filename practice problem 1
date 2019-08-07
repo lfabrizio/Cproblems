@@ -1,0 +1,8 @@
+add_two_ints()
+
+int add_two_ints(int a, int b);
+int add_two_ints(int a, int b);
+{
+ 	int sum = a + b; // calculate var
+	return sum; // give result back
+}
