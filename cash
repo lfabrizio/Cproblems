@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <math.h>
+
+int main(void)
+    // set variables for coin denominations
+{
+   int intQuarter;
+    int intDime;
+    int intNickel;
+    int intPenny;
+    int changeOutput = 0;
+    
+    float changeInput;
+    
+    do
+    {
+   changeInput = get_float("Change owed: ");
+    } 
+   
+   while(changeInput < 0);
+    
+    int cents = round(changeInput * 100);
+    // for loops for each denomination
+    // quarter loop 
+    for (intQuarter = 1; cents >= 25; intQuarter++)
+    {
+    cents -= 25;
+        changeOutput += 1;
+    }
+    // dime loop
+  for (intDime = 1; cents >= 10 && < 25; intDime++)
+    {
+     cents -= 10;
+     changeOutput += 1;   
+    }
+    // nickel loop
+    for (intNickel = 1; cents >= 5 && < 10; intNickel++)
+    {
+    cents -= 5; 
+     changeOutput += 1;
+    }
+    // penny loop
+    for (intPenny = 1; cents >= 1 && < 5; intPenny++) 
+    {
+    cents -= 1;
+    changeOutput += 1;
+    }
+
+printf("%i\n", changeOutput);
+}
