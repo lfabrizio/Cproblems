@@ -1,1 +1,23 @@
 //different solution
+
+#include <cs50.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+int checkchr(string, int);
+int arg1(int);
+// this program takes in a plain text and turns it into a cipher text
+// counting command line args..argument count..argument vector
+int main(int argc, string argv[])
+{
+    string key = argv[1];
+    int arg2 = arg1(argc);
+    int chr = checkchr(key, argc);
+
+    if (argc != 2 || key < 0 || chr < 1 || arg2 < 1)
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
