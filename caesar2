@@ -30,7 +30,7 @@ if (key < 0)
 else
 {
     // asking user for plain text 
-    string plainText = get_string("plaintext);
+    string plainText = get_string("plaintext");
     // print out the chr of the plain text 
     printf("cipher text : ");
 }
