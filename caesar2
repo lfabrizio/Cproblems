@@ -1,0 +1,59 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+// this program takes in a plain text and turns it into a cipher text
+// counting command line args..argument count..argument vector
+// letter a = 0, b = 1, c =2, ...
+int main(int argc, string argv[])
+{
+    if (argc != 2) 
+    {
+    printf("Usage: ./caesar key\n")
+    return 1;
+    }
+}
+// // access the key - string to integer 
+ int key = atoi(argv[1]);  
+
+if (key < 0)
+{
+    printf("Try again \n");
+    return 1;
+}
+// % c is used to print a character
+// % s is used to print a string
+// loop through every character in plaintext
+
+else
+{
+    // asking user for plain text 
+    string plainText = get_string("plaintext);
+    // print out the chr of the plain text 
+    printf("cipher text : ");
+}
+ // characters of the plain text 
+for (int i = 0, n = strlen(plainText); ; i < n; i++)
+{
+    // checking the lowercase
+    if (islower(plainText[i])) // this is the lowercase value
+    {
+        printf("%c", (((plainText[i] + key) - 97) % 26) + 97);
+    }
+    
+    else if (s[i] >= 'A' && s[i] <= 'Z') // this is uppercase value 
+    {
+        ctext[i] = (((s[i] - 'A') + key % 26) + 'A';
+         printf("This is the Plaintext: %c\n", s[i]);
+         printf("This is the key: %\n", key);
+         printf("This is the ciphertext: %c\n", ctext[i]);
+    }
+}
+// prints text 
+    printf("\n");
+                    }
+                    }
+
+// ends program
