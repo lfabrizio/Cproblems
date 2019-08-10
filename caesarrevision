@@ -1,0 +1,40 @@
+#include <cs50.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+// this program takes in a plain text and turns it into a cipher text
+// counting command line args..argument count..argument vector
+int main(int argc, char *argv[])
+{
+    // check arguments
+    if (argc != 2 || !isdigit(*argv[1]))
+    {
+    printf("Try Again\n");
+    return 1;
+    }
+    // get the text 
+     string s = get_string("plaintext: ");
+    // string to int
+    int key = atoi(argv[1]);
+    
+    // make the cipher text variable
+    char ctext [strlen(s) + 1]; 
+    
+    // loop thru every character in plaint text 
+    for (int i = 0, n = strlen(s); i < n; i++)
+    {
+        if (s[i] >= 'a' && s[i] <= 'z') // lowercase value
+        {
+        ctext[i] = (((s[i] - 'a') + key) % 26) + 'a';
+        printf("This is the Plaintext: %c\n", s[i]);
+        printf("This is the key: %i\n", key);
+        printf("This is the cipher: %c\n", ctext[i]);
+        }
+    }
+        // prints text 
+           printf("ciphertext: %s\n", ctext);
+    return 0;
+    
+}
