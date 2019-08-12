@@ -1,3 +1,5 @@
+// most used directives in C
+
 %s : string (char *)
 %d : int
 %c : char
