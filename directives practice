@@ -1,0 +1,6 @@
+%s : string (char *)
+%d : int
+%c : char
+%f : float
+%x : int, in hexadecimal
+%p : pointer
