@@ -1,1 +1,67 @@
 // create vigenere
+// draft 
+
+#include <cs50.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+// use isalpha to make sure it is an alphabetic char and not an int
+// to turn plain text into cipher text
+
+int main(int argc, string argv[])
+{
+
+  // only one argument
+  if (argc != 2) 
+  {
+    printf("Please Try Again\n");
+    return 1;
+  }
+
+  //Convert string to integer key
+ 
+// second command line argument is the key. therefore, 
+    int k = atoi(argv[1]);
+  //if non negative integer
+  if (k < 0)
+  {
+    printf("Please Try Again\n");
+    return 1;
+  }
+  else
+  {
+    // string plain text and print
+    string plainText = get_string("plaintext: ");
+
+   
+    printf("ciphertext: ");
+
+    for (int i = 0, n = strlen(plainText); i < n; i++)
+    {
+    // check for lowercase
+      if
+        islower(plainText[i])
+        {
+          printf("%c", (((plainText[i] + k) - 97) % 26) + 97);
+        }
+      //check for uppercase
+      else if
+        isupper(plainText[i])
+        {
+          printf("%c", (((plainText[i] + k) - 65) % 26) + 65);
+        }
+      //other
+      else
+      {
+        printf("%c", plainText[i]);
+      }
+    }
+
+    printf("\n");
+
+    return 0;
+  }
+}
+
