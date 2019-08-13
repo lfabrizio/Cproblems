@@ -6,12 +6,12 @@
 // take that value ==> char cipher value = some encrypted letter
 // ascii value of lowercase a = 97, b = 98, ...
 
-
+// intialize libraries
 #include <cs50.h>
-#include <stdio.h>
+#include <stdio.h>  //printf, etc
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
+#include <string.h> // strlen
+#include <ctype.h> // isupper islower
 
 // use isalpha to make sure it is an alphabetic char and not an int
 // to turn plain text into cipher text
