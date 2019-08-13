@@ -13,18 +13,13 @@
 #include <string.h> // strlen
 #include <ctype.h> // isupper islower
 
-// use isalpha to make sure it is an alphabetic char and not an int
-// to turn plain text into cipher text
+//Declare the cipher
+void vigenereCipher(char* plainText, char* k);
 
-int main(int argc, string argv[])
-{
-
-  // only one argument
-  if (argc != 2) 
-  {
-    printf("Please Try Again\n");
-    return 1;
-  }
+int main(){
+	// assign the key and declare the text for user to input
+	char* k = "hello"; 
+	char plainText[101]; 
 
   //Convert string to integer key
  
