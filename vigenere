@@ -1,68 +1,82 @@
 // create vigenere
 // c = cipher,  k = key, p = sentence or text/word to encrypt, n = number of letters in alphabet
-//mod length of k
+//mod length of k(key)
 //a = 0, b = 1, c = 2
 //intletter + int keyletter mod by 26  ==> return a ciphered letter as a number
 // take that value ==> char cipher value = some encrypted letter
-// ascii value of lowercase a = 97, b = 98, ...
+// ascii value of lowercase a = 97, b = 98, ... uppercase A = 65, B = 66
 
-// intialize libraries
-#include <cs50.h>
-#include <stdio.h>  //printf, etc
+
+//Initialze the libraries
+#include <stdio.h> //fgets() and printf
+#include <string.h> //strlen()
+#include <ctype.h> // such as isupper and islower
+#include <cs50.h> //cs50 library
 #include <stdlib.h>
-#include <string.h> // strlen
-#include <ctype.h> // isupper islower
 
-//Declare the cipher
-void vigenereCipher(char* plainText, char* k);
 
-int main(){
-	// assign the key and declare the text for user to input
-	char* k = "hello"; 
-	char plainText[101]; 
+bool validate_key(string key);
 
-  //Convert string to integer key
- 
-// second command line argument is the key. therefore, 
-    int k = atoi(argv[1]);
-  //if non negative integer
-  if (k < 0)
-  {
-    printf("Please Try Again\n");
-    return 1;
-  }
-  else
-  {
-    // string plain text and print
-    string plainText = get_string("plaintext: ");
+int main(int argc, string argv[])
+{
+    if (!(argc == 2 && validate_key(argv[1])))
+    {
+        printf("Please enter a character: \n");
+        return 1;
+    }
+    //convert to type of integer 
+    string key = argv[1];
+    
+    string plaintext;
+    do
+    {
+        // get string prompts user for a line of text from stdin and returns it as a string 
+        plaintext = get_string("plaintext: ");
+    }
+    while (plaintext == NULL);
+    
+    //Iterate through plaintext to generate the cipher
 
-   
     printf("ciphertext: ");
 
-    for (int i = 0, n = strlen(plainText); i < n; i++)
+    for (int i = 0, k = 0, len = strlen(plaintext), lenk = strlen(key); i < len; i++)
     {
-    // check for lowercase
-      if
-        islower(plainText[i])
+        if (isupper(plaintext[i])) // range of A - Z + key % 26
         {
-          printf("%c", (((plainText[i] + k) - 97) % 26) + 97);
+            printf("%c", ((plaintext[i] - 'A' + toupper(key[k]) - 'A') % 26 + 'A'));
+           
+            k = (k + 1) % lenk;
+ 
         }
-      //check for uppercase
-      else if
-        isupper(plainText[i])
+        else if (islower(plaintext[i])) // range of lower in ascii and key then ,m
         {
-          printf("%c", (((plainText[i] + k) - 65) % 26) + 65);
+            printf("%c", ((plaintext[i] - 'a' + tolower(key[k]) - 'a') % 26 + 'a'));
+            k = (k + 1) % lenk; 
+       
         }
-      //other
-      else
-      {
-        printf("%c", plainText[i]);
-      }
+        else
+        {
+            printf("%c", plaintext[i]);
+            
+        }
     }
-
     printf("\n");
-
-    return 0;
-  }
 }
+
+bool validate_key(string key)
+{
+    
+    for (int i = 0, len = strlen(key); i < len; i++)
+    { 
+        // if the input is not an "isalpha" print out ..
+        if (!(isalpha(key[i])))
+        {
+            return false;  
+        }
+               
+    }
+    return true;
+            
+}
+
 
