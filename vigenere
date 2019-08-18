@@ -6,7 +6,7 @@
 // take that value ==> char cipher value = some encrypted letter
 // ascii value of lowercase a = 97, b = 98, ... uppercase A = 65, B = 66
 
-
+//revision
 //Initialze the libraries
 #include <stdio.h> //fgets() and printf
 #include <string.h> //strlen()
