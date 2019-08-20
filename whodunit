@@ -2,3 +2,5 @@
 // updated header info for outfile
 // reads each scanline pixel by pixel
 //writes each pixel into the outputs files scanline
+
+//fread takes in four parameters 
