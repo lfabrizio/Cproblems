@@ -3,4 +3,4 @@
 // reads each scanline pixel by pixel
 //writes each pixel into the outputs files scanline
 
-//fread takes in four parameters 
+//fread takes in four parameters(data, size, number, intrpr)
