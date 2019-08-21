@@ -1,0 +1,15 @@
+// practice mario with hashtag F 
+
+#include <stdio.h> 
+ int main() 
+ {
+	printf("######\n");
+	printf("#\n");
+	printf("#\n");
+	printf("#####\n");
+	printf("#\n");
+	printf("#\n");
+	printf("#\n");
+
+	return(0);
+}
