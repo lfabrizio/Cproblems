@@ -1,0 +1,17 @@
+write a C with hashtags
+
+#include <stdio.h> 
+ int main() 
+ {
+   printf("    ######\n");
+   printf("  ##      ##\n");
+   printf(" #\n");
+   printf(" #\n");
+   printf(" #\n");
+   printf(" #\n");
+   printf(" #\n");
+   printf("  ##      ##\n");
+   printf("    ######\n");
+
+	return(0);
+}
