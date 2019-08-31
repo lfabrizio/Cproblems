@@ -1,4 +1,4 @@
-// simple if statement
+// simple if statement to see who is eligable to vote
 
 #include <stdio.h>
 
