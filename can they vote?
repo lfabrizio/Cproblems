@@ -1,6 +1,4 @@
-/**
- * C program to check if a person is eligible to vote or not.
- */
+// simple if statement
 
 #include <stdio.h>
 
