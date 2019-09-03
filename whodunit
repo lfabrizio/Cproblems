@@ -1,6 +1,12 @@
-// opens a file
-// updated header info for outfile
-// reads each scanline pixel by pixel
-//writes each pixel into the outputs files scanline
+// copy file with copy.c whodunit.c
 
-//fread takes in four parameters(data, size, number, intrpr)
+        // convert pixels to reveal pcture
+            if (triple.rgbtRed == 0xff)
+            {
+                triple.rgbtRed = 0xff;
+                triple.rgbtBlue = 0xff;
+                triple.rgbtGreen = 0xff;
+                
+               
+            }
+
