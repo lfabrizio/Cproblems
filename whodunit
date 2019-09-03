@@ -1,6 +1,7 @@
 // copy file with copy.c whodunit.c
+// using dot operator
 
-        // convert pixels to reveal pcture
+        // convert pixels to reveal picture
             if (triple.rgbtRed == 0xff)
             {
                 triple.rgbtRed = 0xff;
