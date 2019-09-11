@@ -1,0 +1,28 @@
+// time up in C programming 
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void) 
+{
+//set variables 
+
+// use get int
+int startTime = get_int("start time: ") // starting hour
+int finishTime = get_int("finish time: "); //finished hour
+
+
+// increment days 
+
+int days = finishTime/24;
+
+int timeNow = startTime + finishTime % 12;
+
+if(timeNow >= 13)
+{
+// return value and current time 
+printf(" The time now is: %i \n, timeNow % 12);
+printf(" %i days have passed \n, days");
+} else {
+    printf("the time now is: %i \n, timeNow % 12");
+    printf(" %i days have passed \n, days");
+}
