@@ -26,3 +26,7 @@ printf(" %i days have passed \n, days");
     printf("the time now is: %i \n, timeNow % 12");
     printf(" %i days have passed \n, days");
 }
+
+
+
+refactorize
