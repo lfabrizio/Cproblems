@@ -1,3 +1,5 @@
+printf .. when to use..
+
 %c	Single character
 %d	Signed decimal integer (int)
 %e	Signed floating-point value in E notation
