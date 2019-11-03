@@ -1,0 +1,56 @@
+// understanding length of a string
+
+
+
+
+Home » C programs » C String User Defined Functions
+
+C program to calculate length of the string without using strlen()
+
+ 
+In this program, we will calculate length of the string without using strlen() function, strlen() is a library function of string.h that returns length of the string.
+
+Here, we will count the total number of characters available in a string and will not use strlen().
+
+Logic
+Read a string
+Create a function and pass string within it
+Take a counter as length (that will store the length of the string), initialize with 0
+Run a loop until NULL character is not found
+Increase the counter (length)
+As NULL founds return the length
+C example to calculate string length
+﻿
+
+#include <stdio.h>
+
+/*function to return length of the string*/
+int stringLength(char*);
+
+int main()
+{
+	char str[100]={0};
+	int length;
+
+	printf("Enter any string: ");
+	scanf("%s",str);
+	
+	/*call the function*/
+	length=stringLength(str);
+	
+	printf("String length is : %d\n",length);
+
+	return 0;
+}
+
+/*function definition...*/
+int stringLength(char* txt)
+{
+	int i=0,count=0;
+	
+	while(txt[i++]!='\0'){
+		count+=1;
+	}
+	
+	return count;
+}
